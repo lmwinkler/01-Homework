@@ -1,6 +1,6 @@
 Here is a link to the final 01-Homework repository: https://lmwinkler.github.io/01-Homework/
 
-Files included:
+All of the files can be found in the Develop directory. Files included:
 
 index.html 
 style.css
