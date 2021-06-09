@@ -1,30 +1,33 @@
+/* This universal selector is changing the box-sizing property from it's default value of content-box to border-box for the entire page. This property controls the type of box model the browser uses when interpreting the html. The border-box model includes the padding and borders in the element's size whereas the content-box adds those values to the element's height and width specifications. Content-box can cause issues by making some elements appear larger than coded. It's becoming common practice that developers add this ruleset to change everything to the border-box model.*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* This is the beginning of the syling for header and navigation links. It appears along the top of the website and has three links that respectively take the user to that section of the webpage.*/
 body {
     background-color: #d9dcd6;
 }
 
-.header {
+header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
 
-.header h1 {
+header h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-.header h1 .seo {
+/* This rule set makes the 'seo' section of the brand name a different color (blue) than the rest (white). */
+header h1 .seo {
     color: #d9dcd6;
 }
-
-.header div {
+/* I switched out the class values of "header" on the div elements for nav elements which are better because it's more meaningful semantic markup than  divs with class descriptions which appear generic to a browser.*/
+nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -32,11 +35,11 @@ body {
     font-size: 20px;
 }
 
-.header div ul {
+nav ul {
     list-style-type: none;
 }
 
-.header div ul li {
+nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
@@ -46,9 +49,7 @@ a {
     text-decoration: none;
 }
 
-p {
-    font-size: 16px;
-}
+/* This is the beginning of the style rulesets for the main section of the page and the div it lives in. I swapped out the one div for the main elements and one for sections to give it meaningful nesting, but left the div with class hero. It's a container for styling the background image and is needed but leaving it in a generic container is better than forcing it into a section or parapraph.*/
 
 .hero {
     height: 800px;
@@ -75,6 +76,29 @@ p {
     margin-left: 20px;
 }
 
+p {
+    font-size: 16px;
+}
+
+.main-section {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.main-section img {
+    max-height: 200px;
+}
+
+.main-section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* This is the beginning of the styling of the aside (previously divs). It contains additional descriptions of some Horiseon services but has been moved to the right side separate from the main content.*/
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -85,116 +109,31 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
 }
-
-.benefit-lead {
+.benefit-section {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
+.benefit-section h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+.benefit-section img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
 
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+/* This is the beginning of the footer styling. It's better to use the footer element than a div for "fine print" type information like copyright or author/ownership (since this isn't an article). Marking it as a footer rather than a div will describe it as non-essential but additional information, clearly separating it from the main content.*/
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+footer h2 {
     font-size: 20px;
 }
